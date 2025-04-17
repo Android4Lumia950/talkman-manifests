@@ -1,0 +1,16 @@
+This way a user can use PIF
+--- a/frameworks/base/keystore/java/android/security/KeyStore.java	2025-04-16 22:51:10.194875201 +0800
++++ b/frameworks/base/keystore/java/android/security/KeyStore.java	2025-04-17 08:43:58.809566852 +0800
+@@ -1128,11 +1128,6 @@
+ 
+     public int attestKey(
+             String alias, KeymasterArguments params, KeymasterCertificateChain outChain) {
+-        // Prevent Google Play Services from using key attestation for SafetyNet
+-        if (mContext.getPackageName().equals("com.google.android.gms")) {
+-            return KeymasterDefs.KM_ERROR_KEY_RATE_LIMIT_EXCEEDED;
+-        }
+-
+         CertificateChainPromise promise = new CertificateChainPromise();
+         try {
+             mBinder.asBinder().linkToDeath(promise, 0);
+

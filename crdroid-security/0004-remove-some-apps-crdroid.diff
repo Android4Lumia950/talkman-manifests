@@ -1,0 +1,60 @@
+--- a/vendor/lineage/config/common.mk	2025-04-14 23:26:27.760418680 +0800
++++ b/vendor/lineage/config/common.mk	2025-04-14 23:28:55.755537647 +0800
+@@ -108,9 +108,7 @@
+ # Lineage packages
+ PRODUCT_PACKAGES += \
+     LineageParts \
+-    LineageSettingsProvider \
+-    LineageSetupWizard \
+-    Updater
++    LineageSettingsProvider
+ 
+ # Themes
+ PRODUCT_PACKAGES += \
+@@ -166,16 +164,6 @@
+ PRODUCT_PACKAGES_DEBUG += \
+     procmem
+ 
+-# Root
+-PRODUCT_PACKAGES += \
+-    adb_root
+-ifneq ($(TARGET_BUILD_VARIANT),user)
+-ifeq ($(WITH_SU),true)
+-PRODUCT_PACKAGES += \
+-    su
+-endif
+-endif
+-
+ # Dex preopt
+ PRODUCT_DEXPREOPT_SPEED_APPS += \
+     SystemUI
+
+--- a/vendor/lineage/config/common_mobile.mk	2025-04-14 23:30:53.186339295 +0800
++++ b/vendor/lineage/config/common_mobile.mk	2025-04-14 23:30:57.859400699 +0800
+@@ -12,13 +12,7 @@
+     Etar \
+     ExactCalculator \
+     Jelly \
+-    Profiles \
+-    Seedvault
+-
+-ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
+-PRODUCT_PACKAGES += \
+-    AudioFX
+-endif
++    Profiles
+ 
+ ifeq ($(PRODUCT_TYPE), go)
+ PRODUCT_PACKAGES += \
+
+--- a/vendor/lineage/config/crdroid.mk	2025-04-16 22:54:56.178807610 +0800
++++ b/vendor/lineage/config/crdroid.mk	2025-04-17 10:18:34.274400288 +0800
+@@ -40,7 +40,6 @@
+     ThemePicker \
+     OmniJaws \
+     OmniStyle \
+-    MatLog \
+     QuickAccessWallet \
+     StitchImage
+ 
+

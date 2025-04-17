@@ -1,0 +1,15 @@
+remove install-recovery.sh
+--- a/build/make/tools/releasetools/common.py	2025-04-14 20:52:33.061084228 +0800
++++ b/build/make/tools/releasetools/common.py	2025-04-14 23:01:58.770036189 +0800
+@@ -3142,10 +3142,6 @@
+        'recovery_device': recovery_device + '$(getprop ro.boot.slot_suffix)',
+        'bonus_args': bonus_args}
+ 
+-  # The install script location moved from /system/etc to /system/bin in the L
+-  # release. In the R release it is in VENDOR/bin or SYSTEM/vendor/bin.
+-  output_sink("bin/install-recovery.sh", sh.encode())
+-
+ 
+ class DynamicPartitionUpdate(object):
+   def __init__(self, src_group=None, tgt_group=None, progress=None,
+

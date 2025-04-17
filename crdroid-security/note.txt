@@ -1,0 +1,5 @@
+remove hardware/xiaomi/megvii
+
+* build/make/core/base_rules.mk:300: error:
+packages/apps/ParanoidSense: MODULE.TARGET.SHARED_LIBRARIES.libmegface
+already defined by hardware/xiaomi/megvii.
