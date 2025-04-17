@@ -1,0 +1,60 @@
+--- a/vendor/lineage/config/common.mk	2025-04-14 23:26:27.760418680 +0800
++++ b/vendor/lineage/config/common.mk	2025-04-14 23:28:55.755537647 +0800
+@@ -108,9 +108,7 @@
+ # Lineage packages
+ PRODUCT_PACKAGES += \
+     LineageParts \
+-    LineageSettingsProvider \
+-    LineageSetupWizard \
+-    Updater
++    LineageSettingsProvider
+ 
+ # Themes
+ PRODUCT_PACKAGES += \
+@@ -166,16 +164,6 @@
+ PRODUCT_PACKAGES_DEBUG += \
+     procmem
+ 
+-# Root
+-PRODUCT_PACKAGES += \
+-    adb_root
+-ifneq ($(TARGET_BUILD_VARIANT),user)
+-ifeq ($(WITH_SU),true)
+-PRODUCT_PACKAGES += \
+-    su
+-endif
+-endif
+-
+ # Dex preopt
+ PRODUCT_DEXPREOPT_SPEED_APPS += \
+     SystemUI
+
+--- a/vendor/lineage/config/common_mobile.mk	2025-04-14 23:30:53.186339295 +0800
++++ b/vendor/lineage/config/common_mobile.mk	2025-04-14 23:30:57.859400699 +0800
+@@ -8,9 +8,7 @@
+ 
+ # AOSP packages
+ PRODUCT_PACKAGES += \
+-    Email \
+-    ExactCalculator \
+-    Exchange2
++    ExactCalculator
+ 
+ # Lineage packages
+ PRODUCT_PACKAGES += \
+@@ -18,13 +16,7 @@
+     Eleven \
+     Etar \
+     Jelly \
+-    Profiles \
+-    Seedvault
+-
+-ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
+-PRODUCT_PACKAGES += \
+-    AudioFX
+-endif
++    Profiles
+ 
+ ifeq ($(PRODUCT_TYPE), go)
+ PRODUCT_PACKAGES += \
+

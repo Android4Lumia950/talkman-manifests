@@ -1,0 +1,12 @@
+--- a/build/make/core/version_defaults.mk	2025-04-16 09:33:38.648999230 +0800
++++ b/build/make/core/version_defaults.mk	2025-04-16 10:18:42.571996966 +0800
+@@ -240,7 +240,7 @@
+     #  It must be of the form "YYYY-MM-DD" on production devices.
+     #  It must match one of the Android Security Patch Level strings of the Public Security Bulletins.
+     #  If there is no $PLATFORM_SECURITY_PATCH set, keep it empty.
+-      PLATFORM_SECURITY_PATCH := 2024-02-05
++      PLATFORM_SECURITY_PATCH := 2025-03-05
+ endif
+ .KATI_READONLY := PLATFORM_SECURITY_PATCH
+ 
+
