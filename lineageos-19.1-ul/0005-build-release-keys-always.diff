@@ -1,0 +1,15 @@
+--- a/build/make/core/sysprop.mk	2025-04-21 19:01:38.380793626 +0800
++++ b/build/make/core/sysprop.mk	2025-04-21 21:18:30.605419055 +0800
+@@ -150,9 +150,9 @@
+ # Both of these tags will be removed and replaced with "release-keys"
+ # when the target-files is signed in a post-build step.
+ ifeq ($(DEFAULT_SYSTEM_DEV_CERTIFICATE),build/make/target/product/security/testkey)
+-BUILD_KEYS := test-keys
++BUILD_KEYS := release-keys
+ else
+-BUILD_KEYS := dev-keys
++BUILD_KEYS := release-keys
+ endif
+ BUILD_VERSION_TAGS += $(BUILD_KEYS)
+ BUILD_VERSION_TAGS := $(subst $(space),$(comma),$(sort $(BUILD_VERSION_TAGS)))
+

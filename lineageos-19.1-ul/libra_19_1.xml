@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<project name="ximi-libra-test/android_device_xiaomi_libra" path="device/xiaomi/libra" revision="lineage-19.1-rev" remote="github" />
+<project name="ximi-libra-test/android_vendor_xiaomi_libra" path="vendor/xiaomi/libra" revision="lineage-19.1" remote="github" />
+
+<!-- msm8992 stuff -->
+<project name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom-caf/msm8994/audio" revision="lineage-18.1-caf-msm8994" remote="github" />
+<project name="LineageOS/android_hardware_qcom_display" path="hardware/qcom-caf/msm8994/display" revision="lineage-18.1-caf-msm8994" remote="github" />
+<project name="LineageOS/android_hardware_qcom_media" path="hardware/qcom-caf/msm8994/media" revision="lineage-18.1-caf-msm8994" remote="github" />
+
+</manifest>
+
+

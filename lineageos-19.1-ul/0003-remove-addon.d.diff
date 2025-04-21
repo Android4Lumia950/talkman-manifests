@@ -1,0 +1,14 @@
+remove addon.d
+--- a/vendor/lineage/config/common.mk	2025-04-14 20:57:20.206447204 +0800
++++ b/vendor/lineage/config/common.mk	2025-04-14 23:26:27.760418680 +0800
+@@ -30,8 +30,7 @@
+ # Backup Tool
+ PRODUCT_COPY_FILES += \
+     vendor/lineage/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+-    vendor/lineage/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+-    vendor/lineage/prebuilt/common/bin/50-lineage.sh:$(TARGET_COPY_OUT_SYSTEM)/addon.d/50-lineage.sh
++    vendor/lineage/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions
+ 
+ ifneq ($(strip $(AB_OTA_PARTITIONS) $(AB_OTA_POSTINSTALL_CONFIG)),)
+ PRODUCT_COPY_FILES += \
+
