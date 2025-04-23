@@ -1,0 +1,57 @@
+<?xmnl version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="codeberg" fetch="https://codeberg.org" />
+  <remote name="Gitlab" fetch="https://gitlab.com" />
+
+    <!-- Replace Lineage repos with own forks, due to not merged CVE from LOS gerrit -->
+    <remove-project name="LineageOS/android_external_expat" />
+    <remove-project name="LineageOS/android_frameworks_av" />
+    <remove-project name="LineageOS/android_system_bt" />
+    <remove-project name="LineageOS/android_vendor_qcom_opensource_system_bt" />
+    <remove-project name="LineageOS/android_packages_apps_DocumentsUI" />
+    <remove-project name="LineageOS/android_packages_apps_PackageInstaller" />
+    <remove-project name="LineageOS/android_packages_providers_DownloadProvider" />
+    <remove-project name="LineageOS/android_packages_providers_MediaProvider" />
+    <remove-project name="LineageOS/android_packages_services_Telecomm" />
+    <remove-project name="LineageOS/android_packages_services_Telephony" />
+    <remove-project name="LineageOS/android_vendor_qcom_opensource_packages_apps_Bluetooth" />
+
+    <remove-project name="platform/external/dng_sdk" />
+    <remove-project name="platform/external/giflib" />
+    <remove-project name="platform/external/skia" />
+    <remove-project name="platform/external/sonivox" />
+    <remove-project name="platform/prebuilts/abi-dumps/vndk" />
+    <remove-project name="platform/system/libfmq" />
+
+    <project path="external/dng_sdk" name="lin18-microG/android_external_dng_sdk" groups="pdk" remote="codeberg" />
+    <project path="external/giflib" name="lin18-microG/android_external_giflib" groups="pdk,qcom_msm8x26" remote="codeberg" />
+    <project path="external/expat" name="lin18-microG/android_external_expat" groups="pdk" remote="codeberg" />
+    <project path="external/skia" name="lin18-microG/android_external_skia" groups="pdk,qcom_msm8x26" remote="codeberg" />
+    <project path="external/sonivox" name="lin18-microG/android_external_sonivox" groups="pdk" remote="codeberg" />
+    <project path="frameworks/av" name="lin18-microG/android_frameworks_av" groups="pdk" remote="codeberg" />
+    <project path="packages/apps/DocumentsUI" groups="pdk-cw-fs,pdk-fs"
+             name="lin18-microG/android_packages_apps_DocumentsUI" remote="codeberg" />
+    <project path="packages/apps/PermissionController" groups="pdk-cw-fs,pdk-fs"
+             name="lin18-microG/android_packages_apps_PackageInstaller" remote="codeberg" />
+    <project path="packages/providers/MediaProvider" groups="pdk-cw-fs,pdk-fs"
+             name="lin18-microG/android_packages_providers_MediaProvider" remote="codeberg" />
+    <project path="packages/providers/DownloadProvider" groups="pdk-cw-fs,pdk-fs"
+             name="lin18-microG/android_packages_providers_DownloadProvider" remote="codeberg" />
+    <project path="packages/services/Telecomm" groups="pdk-cw-fs,pdk-fs"
+             name="lin18-microG/android_packages_services_Telecomm" remote="codeberg" />
+    <project path="packages/services/Telephony" groups="pdk-cw-fs,pdk-fs"
+             name="lin18-microG/android_packages_services_Telephony" />
+    <project path="prebuilts/abi-dumps/vndk" groups="pdk-fs" name="lin18-microG/android_prebuilts_abi-dumps_vndk" remote="codeberg" />
+    <project path="system/bt" name="lin18-microG/android_system_bt" groups="pdk" remote="codeberg" />
+    <project path="system/libfmq" name="lin18-microG/android_system_libfmq" groups="pdk" />
+    <project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" remote="codeberg"
+             name="lin18-microG/android_vendor_qcom_opensource_packages_apps_Bluetooth" groups="qcom,pdk-qcom" />
+    <project path="vendor/qcom/opensource/commonsys/system/bt" remote="codeberg"
+             name="lin18-microG/android_vendor_qcom_opensource_system_bt" groups="qcom,pdk-qcom" />
+
+  <remove-project name="LineageOS/android_packages_apps_Bluetooth" />
+  <project path="packages/apps/Bluetooth" name="lin18-microG/android_packages_apps_Bluetooth" groups="pdk-cw-fs,pdk-fs" />
+  <remove-project name="LineageOS/android_frameworks_base" />
+  <project path="frameworks/base" name="lin18-microG/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="codeberg" />
+</manifest>
