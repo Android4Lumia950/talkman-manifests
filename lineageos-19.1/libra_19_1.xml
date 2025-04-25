@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+   <project name="ximi-libra-test/android_device_xiaomi_libra" path="device/xiaomi/libra" revision="lineage-19.1-rev" remote="github" />
+   <project name="ximi-libra-test/android_vendor_xiaomi_libra" path="vendor/xiaomi/libra" revision="lineage-19.1" remote="github" />
+
+   <!-- msm8994 stuff -->
+   <project name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom-caf/msm8994/audio" revision="lineage-18.1-caf-msm8994" remote="github" />
+   <project name="LineageOS-UL/android_hardware_qcom_display" path="hardware/qcom-caf/msm8994/display" revision="lineage-20.0-caf-msm8994" remote="github" />
+   <project name="LineageOS/android_hardware_qcom_media" path="hardware/qcom-caf/msm8994/media" revision="lineage-18.1-caf-msm8994" remote="github" />
+
+   <!-- timekeep -->
+   <project name="LineageOS/android_hardware_sony_timekeep" path="hardware/sony/timekeep" revision="lineage-19.1" remote="github" />
+
+
+   <!-- LineageOS-UL imports -->
+
+   <!-- camera fix -->
+   <remove-project path="system/core" />
+   <project path="system/core" name="LineageOS-UL/android_system_core" revision="lineage-19.1" remote="github" />
+
+   <!-- adb always offline fix -->
+   <remove-project path="packages/modules/adb" />
+   <project path="packages/modules/adb" name="LineageOS-UL/android_packages_modules_adb" revision="lineage-19.1" remote="github" />
+   
+
+   <!-- no-bpf -->
+   <remove-project path="system/bpf" />
+   <project path="system/bpf" name="LineageOS-UL/android_system_bpf" revision="lineage-19.1" remote="github" />
+    
+   <remove-project path="system/netd" />
+   <project path="system/netd" name="LineageOS-UL/android_system_netd" revision="lineage-19.1" remote="github" />
+
+   <!-- legacy sepolicy -->
+   <project path="device/qcom/sepolicy-legacy" name="LineageOS-UL/android_device_qcom_sepolicy" revision="lineage-19.1-legacy" remote="github" />
+
+   <!--
+   <remove-project path="system/sepolicy" />
+   <project path="system/sepolicy" name="LineageOS-UL/android_system_sepolicy" revision="lineage-19.1" remote="github" />
+   -->
+
+   <!-- TARGET_HAS_LEGACY_CAMERA_HAL1 
+   <remove-project path="vendor/lineage" />   
+   <project path="vendor/lineage" name="LineageOS-UL/android_vendor_lineage" revision="lineage-19.1" remote="github" />
+   -->
+   
+</manifest>
+

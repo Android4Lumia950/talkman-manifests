@@ -1,10 +1,10 @@
 screen refresh rate control from byzyb's diff
 --- a/packages/apps/Settings/res/values/cm_arrays.xml
 +++ b/packages/apps/Settings/res/values/cm_arrays.xml
-@@ -49,4 +49,27 @@
-     <!-- Override supported color mode labels.
-          NOTE: This list must have the exact same items count as config_availableColorModes -->
-     <string-array name="available_vendor_color_modes" translatable="false" />
+@@ -36,4 +36,27 @@
+         <item>900000</item>
+         <item>1800000</item>
+     </string-array>
 +
 +    <!-- Display settings. The minimum refresh rate of screen. These are shown in a list dialog. -->
 +    <string-array name="screen_refresh_rate_entries">
