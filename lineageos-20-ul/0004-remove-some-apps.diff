@@ -34,7 +34,7 @@
 
 --- a/vendor/lineage/config/common_full.mk	2025-04-23 12:14:09.674449464 +0800
 +++ b/vendor/lineage/config/common_full.mk	2025-04-23 12:14:28.883550721 +0800
-@@ -12,19 +12,13 @@
+@@ -12,17 +12,14 @@
      Eleven \
      Etar \
      Profiles \
@@ -45,14 +45,14 @@
  ifneq ($(PRODUCT_NO_CAMERA),true)
  PRODUCT_PACKAGES += \
      Aperture
- endif
+-endif
  
 -ifneq ($(TARGET_EXCLUDES_AUDIOFX),true)
 -PRODUCT_PACKAGES += \
 -    AudioFX
--endif
--
++PRODUCT_DEXPREOPT_SPEED_APPS += \
++   Aperture
+ endif
+ 
  # Extra cmdline tools
- PRODUCT_PACKAGES += \
-     unrar \
 
