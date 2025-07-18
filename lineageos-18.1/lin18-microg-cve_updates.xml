@@ -14,6 +14,7 @@
     <remove-project name="LineageOS/android_system_timezone" />
     <remove-project name="LineageOS/android_vendor_qcom_opensource_system_bt" />
     <remove-project name="LineageOS/android_packages_apps_DocumentsUI" />
+    <remove-project name="LineageOS/android_packages_apps_ManagedProvisioning" />
     <remove-project name="LineageOS/android_packages_apps_PackageInstaller" />
     <remove-project name="LineageOS/android_packages_providers_DownloadProvider" />
     <remove-project name="LineageOS/android_packages_providers_MediaProvider" />
@@ -39,6 +40,8 @@
     <project path="frameworks/av" name="lin18-microG/android_frameworks_av" groups="pdk" remote="codeberg" />
     <project path="packages/apps/DocumentsUI" groups="pdk-cw-fs,pdk-fs"
              name="lin18-microG/android_packages_apps_DocumentsUI" remote="codeberg" />
+    <project path="packages/apps/ManagedProvisioning" groups="pdk-fs"
+             name="lin18-microG/android_packages_apps_ManagedProvisioning" remote="codeberg" />
     <project path="packages/apps/PermissionController" groups="pdk-cw-fs,pdk-fs"
              name="lin18-microG/android_packages_apps_PackageInstaller" remote="codeberg" />
     <project path="packages/providers/MediaProvider" groups="pdk-cw-fs,pdk-fs"
