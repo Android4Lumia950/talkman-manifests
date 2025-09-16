@@ -4,12 +4,14 @@
   <remote name="codeberg" fetch="https://codeberg.org" />
   <remote name="Gitlab" fetch="https://gitlab.com" />
 
+    <!-- tmp_cve_replace.xml -->	
     <!-- Replace Lineage repos with own forks, due to not merged CVE from LOS gerrit -->
     <remove-project name="LineageOS/android_external_cldr" />
     <remove-project name="LineageOS/android_external_expat" />
     <remove-project name="LineageOS/android_external_freetype" />
     <remove-project name="LineageOS/android_external_icu" />
     <remove-project name="LineageOS/android_frameworks_av" />
+    <remove-project name="LineageOS/android_frameworks_opt_telephony" />
     <remove-project name="LineageOS/android_system_bt" />
     <remove-project name="LineageOS/android_system_timezone" />
     <remove-project name="LineageOS/android_vendor_qcom_opensource_system_bt" />
@@ -26,6 +28,7 @@
     <remove-project name="platform/external/giflib" />
     <remove-project name="platform/external/skia" />
     <remove-project name="platform/external/sonivox" />
+    <remove-project name="platform/packages/modules/CellBroadcastService" />
     <remove-project name="platform/prebuilts/abi-dumps/vndk" />
     <remove-project name="platform/system/libfmq" />
 
@@ -38,12 +41,16 @@
     <project path="external/skia" name="lin18-microG/android_external_skia" groups="pdk,qcom_msm8x26" remote="codeberg" />
     <project path="external/sonivox" name="lin18-microG/android_external_sonivox" groups="pdk" remote="codeberg" />
     <project path="frameworks/av" name="lin18-microG/android_frameworks_av" groups="pdk" remote="codeberg" />
+    <project path="frameworks/opt/telephony" groups="pdk"
+             name="lin18-microG/android_frameworks_opt_telephony" remote="codeberg" />
     <project path="packages/apps/DocumentsUI" groups="pdk-cw-fs,pdk-fs"
              name="lin18-microG/android_packages_apps_DocumentsUI" remote="codeberg" />
     <project path="packages/apps/ManagedProvisioning" groups="pdk-fs"
              name="lin18-microG/android_packages_apps_ManagedProvisioning" remote="codeberg" />
     <project path="packages/apps/PermissionController" groups="pdk-cw-fs,pdk-fs"
              name="lin18-microG/android_packages_apps_PackageInstaller" remote="codeberg" />
+    <project path="packages/modules/CellBroadcastService" groups="pdk"
+             name="lin18-microG/android_packages_modules_CellBroadcastService" remote="codeberg" />
     <project path="packages/providers/MediaProvider" groups="pdk-cw-fs,pdk-fs"
              name="lin18-microG/android_packages_providers_MediaProvider" remote="codeberg" />
     <project path="packages/providers/DownloadProvider" groups="pdk-cw-fs,pdk-fs"
@@ -61,6 +68,7 @@
     <project path="vendor/qcom/opensource/commonsys/system/bt" remote="codeberg"
              name="lin18-microG/android_vendor_qcom_opensource_system_bt" groups="qcom,pdk-qcom" />
 
+  <!-- updates.xml -->
   <!-- Replaced/enhanced Repositories -->
   <remove-project name="LineageOS/android_build" />
   <project path="build/make" name="lin18-microG/android_build_make" groups="pdk" remote="codeberg" >
