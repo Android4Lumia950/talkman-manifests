@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="Android4Lumia950/android_device_msft_talkman" path="device/msft/talkman" remote="github" revision="lineage-18.1" />
+  <!--
+  <project name="ximi-libra-test/android_kernel_xiaomi_libra" path="device/xiaomi/libra" remote="github" revision="lineage-18.1-ksu" />
+  -->
+  <project name="Android4Lumia950/android_vendor_msft_talkman" path="vendor/msft/talkman" remote="github" revision="lineage-18.1-julian" />
+  <project name="LineageOS/android_hardware_sony_timekeep" path="hardware/sony/timekeep" remote="github" revision="lineage-18.1" />
+
+
+<!--- NetworkStack patch
+     <!-- Remove the default NetworkStack project -->
+    <remove-project name="packages/modules/NetworkStack" />
+
+    <!-- Add networkstack -->
+    <project
+        name="Android4Lumia950/packages_modules_NetworkStack"
+        path="packages/modules/NetworkStack"
+        remote="github"
+        revision="11" />
+  
+    
+  
+</manifest>
