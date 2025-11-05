@@ -18,7 +18,15 @@
         path="packages/modules/NetworkStack"
         remote="github"
         revision="11" />
+    <!-- Delete the old updater -->
   
-    
+  <remove-project name="packages/apps/Updater" />
+  
+    <!-- Add ours -->
+  <project
+    name="Android4Lumia950/android_packages_apps_Updater"
+    path="packages/apps/Updater"
+    remote="github"
+    revision="lineage-18.1" />
   
 </manifest>
